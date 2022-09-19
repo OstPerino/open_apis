@@ -20,7 +20,7 @@ let inputValue = null
 
 // Queries
 async function getPerson() {
-    let data = await axios.post(`http://localhost:9000/`, { name: inputValue });
+    let data = await axios.post(`http://localhost:5000/`, { name: inputValue });
 
     return data;
 }
