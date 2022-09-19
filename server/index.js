@@ -1,7 +1,3 @@
-// import express from 'express'
-// import axios from 'axios'
-// import cors from 'cors'
-// import bodyParser from 'body-parser'
 
 const express = require('express')
 const axios = require('axios')
@@ -46,10 +42,6 @@ app.post('/', async (req, res) => {
   } catch (e) {
     console.log(e, 'APIs trouble')
   }
-})
-
-app.get('/', (req, res) => {
-  res.send('Query is good')
 })
 
 app.listen(port, () => {
