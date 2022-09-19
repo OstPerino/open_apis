@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg') no-repeat fixed;
+}
+
+.wrapper {
+    padding: 2rem;
+    height: 100%;
+}
+
+.input-container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(209, 196, 8);
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    width: 50rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 0.5rem solid rgb(209, 196, 8);
+    border-radius: 1rem;
+    font-size: 1.8rem;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border: 1px solid rgb(209, 196, 8);
+    background-color: rgb(209, 196, 8);
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.error {
+    display: none;
+}
+
+.error-active {
+    font-size: 4rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+
+.loading {
+    display: none;
+}
+
+.flex-container-none {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.character-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.characteristic-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.characteristic-container span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(209, 196, 8);
+    margin-bottom: 0.5rem;
+}

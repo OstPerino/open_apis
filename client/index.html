@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Open Apis</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="input-container">
+                    <label class="label">Find Star Wars Character</label>
+                    <div class="submit-container">
+                        <input type="text" class="input">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+                <div class="flex-container-none">
+                    <div class="character-container">
+                        <div class="image-container">
+                            <!-- <img src="https://tse1.mm.bing.net/th?id=OIP.uPTRLR8uspCiafiunUqKfQHaMJ&amp" alt="image"> -->
+                        </div>
+                        <div class="characteristic-container">
+                            <span class="name">Name: </span>
+                            <span class="height">Height: </span>
+                            <span class="mass">Mass: </span>
+                            <span class="hair-color">Hair Color: </span>
+                            <span class="eye-color">Eye Color: </span>
+                            <span class="birth-year">Birth Year: 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="error">
+                    <h1>Character not found!</h1>
+                </div>
+                <!-- <div class="loading">
+                    <p>No item yet</p>
+                </div> -->
+            </div>
+        </div>
+    </main>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
