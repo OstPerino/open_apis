@@ -106,3 +106,8 @@ main {
     color: rgb(209, 196, 8);
     margin-bottom: 0.5rem;
 }
+
+.visits-p {
+    color: rgb(209, 196, 8);
+    font-size: 20px;
+}

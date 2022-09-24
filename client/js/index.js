@@ -1,4 +1,7 @@
 
+// Visits
+const visits = document.querySelector('.visits-p')
+
 // Actions
 const button = document.querySelector('.btn')
 const inputElement = document.querySelector('.input')
@@ -67,17 +70,11 @@ button.addEventListener('click', async (event) => {
 
 })
 
-if ("" == document.cookie)
-{ // Инициализация cookie.
- setCookie(1);
- console.log('Первое посещение сайта')
-}
-else {
-   var cookies = parseCookie();
-   // Вывод приветствия, числа посещений и увеличение числа посещений на 1.
-   console.log("Мы снова рады видеть Вас на моем сайте! Число лично ваших посещений - " + cookies.visits++ + " !");
-   // Вывод даты последнего посещения.
-   console.log("Последний раз Вы были у меня на сайте: " + cookies.LastVisit + ".");
-   // Обновление cookie.
-   setCookie(isNaN(cookies.visits) ? 1 : cookies.visits);
+if ("" == document.cookie) {
+    setCookie(1);
+    visits.innerHTML = `Your visits: ${cookies.visits}`
+} else {
+    var cookies = parseCookie();
+    visits.innerHTML = `Your visits: ${cookies.visits++}`
+    setCookie(isNaN(cookies.visits) ? 1 : cookies.visits);
 }
