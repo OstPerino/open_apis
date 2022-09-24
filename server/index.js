@@ -5,7 +5,8 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 5000
+const serverUrl = 'localhost' || process.env.SERVER_URL
+const port = 7000 || process.env.PORT
 
 // API URLs
 const starWarsApi = 'https://swapi.dev/api/people/'
@@ -15,14 +16,6 @@ const imageApi = 'https://imsea.herokuapp.com/api/1?q='
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// Get query to send data to client
-app.get('/:id', async (req, res) => {
-  let person = await axios.get(`${starWarsApi}${req.params.id}`)
-  let images = await axios.get(`${imageApi}${person.data.name}`)
-
-  res.send({ person: person.data, imageUrl: images.data.results[0] })
-})
 
 // Post query to find character
 app.post('/', async (req, res) => {
